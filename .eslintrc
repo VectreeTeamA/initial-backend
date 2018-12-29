@@ -4,6 +4,9 @@
        "prettier"
     ],
     "rules": {
+        "no-use-before-define": [ 0 ], 
+        "import/no-unresolved": [ 0 ],
+        "global-require": [ 0 ],
         "space-in-parens": [ 0, "always" ],
         "template-curly-spacing": [ 2, "always" ],
         "array-bracket-spacing": [ 2, "always" ],
@@ -22,7 +25,7 @@
         "camelcase": [ 1 ],
         "no-underscore-dangle" : [0, "always"]
     },
-    "extends": ["eslint:recommended", "prettier"],
+    "extends": ["eslint:recommended", "prettier", "airbnb-base"],
 
     "globals":{
       "document": true,

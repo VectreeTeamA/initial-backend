@@ -1,10 +1,11 @@
-const mongoose = require('../../utils/mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('../../utils/mongoose');
+
+const { Schema } = mongoose;
 
 const User = new Schema({
-	username: String,
-	password: String
+  username: String,
+  password: String,
 });
 
 // You may be wondering about password security, specifically salting/hashing the password.
