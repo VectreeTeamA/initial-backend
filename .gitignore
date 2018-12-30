@@ -1,1 +1,13 @@
-/node_modules
+coverage
+build
+node_modules
+stats.json
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+
+# yarn, npm
+*.log
+package-lock.json
