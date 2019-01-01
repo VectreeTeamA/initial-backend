@@ -12,9 +12,10 @@
     }
   },
   "database": {
-    "uri": "mongodb://127.0.0.1/initial",
+    "uri": "mongodb://127.0.0.1:27017/initial",
     "options": {
-      "keepAlive": 1
+      "keepAlive": 1,
+      "useNewUrlParser": true
     },
     "useNewUrlParser": true,
     "debug": false
