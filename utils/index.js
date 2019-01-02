@@ -1,4 +1,4 @@
-const mongoose = require('./mongoose');
+const mongoose = require('utils/mongoose');
 
 // The purpose this is to make sure every successful
 // and error response is sent in the same format.
@@ -8,7 +8,8 @@ const error = (res, err, code) => {
     // eslint-disable-next-line no-param-reassign
     err = err.message;
   }
-  return response(res, { error: err }, code, false);
+
+  return response(res, err, code, false);
 };
 
 const success = (res, data, code) => response(res, data, code, true);
@@ -18,7 +19,7 @@ const response = (res, data, code, success) => {
   if (typeof code !== 'undefined') {
     res.statusCode = code;
   }
-  return res.json({ ...data, success });
+  return res.send({ message: data, success });
 };
 
 module.exports = { mongoose, success, error };

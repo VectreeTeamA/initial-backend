@@ -7,9 +7,9 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const HttpStatus = require('http-status-codes');
 const LocalStrategy = require('passport-local').Strategy;
-const User = require('./db/models/user');
+const { User } = require('db');
 
-const mongoose = require('./utils/mongoose');
+const { mongoose } = require('utils');
 
 const app = express();
 
@@ -53,7 +53,7 @@ function passportInitialization() {
 
 function routesInitialization() {
   // Add endpoints to app
-  require('./routes')(app);
+  require('routes')(app);
 }
 
 function errorHandlersInitialization() {

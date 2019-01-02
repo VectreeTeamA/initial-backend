@@ -5,7 +5,7 @@ const passport = require('passport');
 const router = express.Router({});
 
 const HttpStatus = require('http-status-codes');
-const User = require('../db/models/user');
+const User = require('db/models/user');
 
 router.post('/register', (req, res) => {
   const local = passport.authenticate('local');
