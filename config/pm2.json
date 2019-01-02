@@ -1,9 +1,10 @@
-{
-  "apps": [
+{"apps": 
+  [
     {
       "name": "server",
-      "script": "./app.js",
+      "script": "./bin/www",
       "watch": true,
+      "log_date_format": "DD-MM-YYYY",
       "env": {
         "NODE_ENV": "development",
         "NODE_PATH": "."
